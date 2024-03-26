@@ -90,24 +90,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': config("PG_NAME", default="zherdesh_dev"),
-#         'USER': config("PG_USER", default="zherdesh_user"),
-#         'PASSWORD': config("PG_PASS", default="qwerty2003"),
-#         'HOST': config("PG_HOST", default="db"),
-#         'PORT': config("PG_PORT", default="5432"),
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config("PG_NAME", default="tata_dev"),
+        'USER': config("PG_USER", default="tata_user"),
+        'PASSWORD': config("PG_PASS", default="qwerty2003"),
+        'HOST': config("PG_HOST", default="db"),
+        'PORT': config("PG_PORT", default="5432"),
+    }
+}
 
 
 CORS_ALLOW_ALL_ORIGINS = True
